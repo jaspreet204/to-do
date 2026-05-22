@@ -6,37 +6,34 @@ function reducer(tasks, action) {
     switch(action.type) {
         case "ADD":
            return [
-             ...tasks,
+               ...tasks,
                { id: Date.now(),task: action.task,
                  date: new Date().toLocaleString(), complete: false
                }
-            ];
+             ];
         case "DELETE":
         return tasks.filter((item) => item.id !== action.id); 
     
         case "COMPLETE":
-        return tasks.map((item) => {
-        if(item.id === action.id){
-            return{...item,complete: !item.complete };
-        }
-        return item;        
-        });
+          return tasks.map((item) => {
+          if(item.id === action.id){ return{...item,
+          complete: !item.complete };}
+          return item;        
+          });
         case "UPDATE":
-        return tasks.map((item) => {
-            if(item.id === action.id){
-                return{
-                ...item,
-                task: action.task,
-                date: new Date().toLocaleString()
-            };
-         }
+        return tasks.map((item) => { if(item.id === action.id){
+                return{ 
+               ...item, task: action.task,
+               date: new Date().toLocaleString()
+              };
+           }
         return item;
     });
-      default:
+       default:
        return tasks;
+      }
     }
-}
-    function App() {
+   function App() {
       const [tasks, dispatch] = useReducer(reducer, 
         JSON.parse(localStorage.getItem("task"))||[]
       );
@@ -46,16 +43,14 @@ function reducer(tasks, action) {
         );
       }, [tasks]);
       return (
-           <section className="main-page">
-            <h1>Remember Your Tasks</h1>
+         <section className="main-page">
+           <h1>Task Reminder </h1>
             <p className="sub-title">
-              Keep track of what you need to do today
+              Keep track your today
             </p>
-          <AddTask dispatch={dispatch}/>
+           <AddTask dispatch={dispatch}/>
           <TaskList tasks={tasks}  dispatch={dispatch}/>
-      
        </section>
       );
     }
-
-    export default App;
+export default App;
