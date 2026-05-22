@@ -4,7 +4,9 @@ function TaskList(props){
         <section className="task-shelf">
             {props.tasks.map((item, index) => {
                 return(
-                    <TaskBox key={index} task={item}/>
+                    <TaskBox key={index} task={item}
+                      dispatch={props.dispatch}
+                    />
                 );
             })}
         </section>
