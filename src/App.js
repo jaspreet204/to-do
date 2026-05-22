@@ -17,7 +17,15 @@ function reducer(tasks, action) {
         case "DELETE":
         return tasks.filter((item) => item.id !== action.id); 
         default: return tasks;
-    }
+    
+        case "COMPLETE":
+        return tasks.map((item) => {
+        if(item.id === action.id){
+            return{...item,complete: !item.complete };
+        }
+        return item;
+    });
+}
 }
 function App() {
   const [tasks, dispatch] = useReducer(reducer, []);
