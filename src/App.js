@@ -23,6 +23,17 @@ function reducer(tasks, action) {
         if(item.id === action.id){
             return{...item,complete: !item.complete };
         }
+        return item;        
+        });
+        case "UPDATE":
+        return tasks.map((item) => {
+            if(item.id === action.id){
+                return{
+                ...item,
+                task: action.task,
+                date: new Date().toLocaleString()
+            };
+        }
         return item;
     });
 }
