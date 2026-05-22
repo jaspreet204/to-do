@@ -30,7 +30,7 @@ body{
 .write-area input[type="text"]{
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #d6bfae;
     border-radius: 8px;
 }
 
@@ -38,7 +38,7 @@ body{
     padding: 12px 20px;
     border: none;
     border-radius: 8px;
-    background-color: #2563eb;
+    background-color: #a16207;
     color: white;
     cursor: pointer;
 }
@@ -50,26 +50,28 @@ body{
 }
 
 .note-card{
-    background-color: white;
+    background-color:  #fff8f1;
     padding: 18px;
-    border-radius: 10px;
+    border-radius: 12px;
+    border-left: 6px solid #a16207;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .done-card{
-    background-color: #d1fae5;
-    border-left: 6px solid #10b981;
+    background-color:#e7f8ed ;
+    border-left: 6px solid #16a34a ;
 }
 
 .note-card h2{
     font-size: 20px;
     margin-bottom: 6px;
+    color: #3b2f2f;
 }
 
 .note-card p{
-    color: #555;
+    color: #6b5f5a;
     font-size: 14px;
 }
 
@@ -78,4 +80,6 @@ body{
     gap: 15px;
     font-size: 22px;
     cursor: pointer;
+    cursor: pointer;
+    color: #3b2f2f;
 }

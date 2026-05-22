@@ -46,10 +46,15 @@ function reducer(tasks, action) {
         );
       }, [tasks]);
       return (
-        <>
+           <section className="main-page">
+            <h1>Remember Your Tasks</h1>
+            <p className="sub-title">
+              Keep track of what you need to do today
+            </p>
           <AddTask dispatch={dispatch}/>
           <TaskList tasks={tasks}  dispatch={dispatch}/>
-        </>
+      
+       </section>
       );
     }
 
