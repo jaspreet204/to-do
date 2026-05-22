@@ -1,13 +1,13 @@
-function TaskList(){
-
+import TaskBox from "./TaskBox";
+function TaskList(props){
     return(
-
         <section className="task-shelf">
-
-            <h2>No Tasks Yet</h2>
-
+            {props.tasks.map((item, index) => {
+                return(
+                    <TaskBox key={index} task={item}/>
+                );
+            })}
         </section>
-
     );
 }
 
