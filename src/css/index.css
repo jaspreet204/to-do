@@ -17,8 +17,16 @@ body{
 
 .main-page h1{
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     color: #3b2f2f;
+    font-size: 34px;
+}
+
+.sub-title{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #7a6d68;
+    font-size: 16px;
 }
 
 .write-area form{
