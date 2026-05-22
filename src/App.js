@@ -14,6 +14,8 @@ function reducer(tasks, action) {
                     complete: false
                 }
             ];
+        case "DELETE":
+        return tasks.filter((item) => item.id !== action.id); 
         default: return tasks;
     }
 }
