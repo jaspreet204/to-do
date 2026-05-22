@@ -20,9 +20,10 @@ function reducer(tasks, action) {
           complete: !item.complete };}
           return item;        
           });
+
         case "UPDATE":
         return tasks.map((item) => { if(item.id === action.id){
-                return{ 
+            return{ 
                ...item, task: action.task,
                date: new Date().toLocaleString()
               };

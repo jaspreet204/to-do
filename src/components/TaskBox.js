@@ -9,12 +9,13 @@ function TaskBox(props){
     }
     const updateTask = () => {
     const newTask = prompt("Update task", props.task.task);
+
     if(newTask && newTask.trim() !== ""){ 
         props.dispatch({
         type: "UPDATE",id: props.task.id, task: newTask
         });
-    }
-}
+      }
+  }
     return(
            <section className={props.task.complete ? "note-card done-card" : "note-card"}>
            <h2>{props.task.task}</h2>
