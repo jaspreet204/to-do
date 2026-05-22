@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useReducer, useEffect } from "react";
 import AddTask from "./components/AddTask";
 import TaskList from "./components/TaskList";
 
@@ -39,7 +39,14 @@ function reducer(tasks, action) {
 }
 }
 function App() {
-  const [tasks, dispatch] = useReducer(reducer, []);
+  const [tasks, dispatch] = useReducer(reducer, 
+    JSON.parse(localStorage.getItem("task"))||[]
+  );
+  useEffect(() => {
+    localStorage.setItem( "tasks",
+      JSON.stringify(tasks)
+    );
+   }, [tasks]);
   return (
     <>
       <AddTask dispatch={dispatch}/>
