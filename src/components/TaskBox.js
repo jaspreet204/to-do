@@ -1,9 +1,9 @@
-function TaskBox(){
+function TaskBox(props){
 
     return(
-
-        <section>
-
+        <section className="notes">
+           <h2>{props.task.task}</h2>
+            <p>{props.task.date}</p>
         </section>
 
     );
