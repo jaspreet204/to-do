@@ -2,7 +2,7 @@ function AddTask(props){
     const addTask = (event) => {
         event.preventDefault();
         const task = event.target.task.value;
-        if(task !== ""){
+        if(task.trim !== ""){
         props.dispatch({ type: "ADD", task: task});
         event.target.reset();
         }

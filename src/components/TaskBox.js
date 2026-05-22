@@ -1,4 +1,5 @@
 import { FaCheck, FaEdit, FaTrash } from "react-icons/fa";
+
 function TaskBox(props){
     const completeTask = () => {
     props.dispatch({ type: "COMPLETE",id: props.task.id });
@@ -8,7 +9,7 @@ function TaskBox(props){
     }
     const updateTask = () => {
     const newTask = prompt("Update task", props.task.task);
-    if(newTask !== ""){ 
+    if(newTask && newTask.trim() !== ""){ 
         props.dispatch({
         type: "UPDATE",id: props.task.id, task: newTask
         });
