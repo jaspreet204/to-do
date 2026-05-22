@@ -1,3 +1,4 @@
+import { FaCheck, FaEdit, FaTrash } from "react-icons/fa";
 function TaskBox(props){
     const completeTask = () => {
     props.dispatch({ type: "COMPLETE",id: props.task.id });
@@ -17,9 +18,12 @@ function TaskBox(props){
            <section className={props.task.complete ? "note-card done-card" : "note-card"}>
            <h2>{props.task.task}</h2>
            <p>{props.task.date}</p>
-           <input type="button"  value="Done" onClick={completeTask} />
-           <input type="button" value="Delete" onClick={deleteTask} />
-           <input type="button" value="Edit" onClick={updateTask}/>
+            
+            <div className="task-icons">
+                <FaCheck onClick={completeTask} />
+                <FaEdit onClick={updateTask} />
+                <FaTrash onClick={deleteTask} />
+            </div>
         </section>
     );
 }
