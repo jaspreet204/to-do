@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <AddTask dispatch={dispatch}/>
-      <TaskList tasks={tasks}/>
+      <TaskList tasks={tasks}  dispatch={dispatch}/>
     </>
   );
 }
