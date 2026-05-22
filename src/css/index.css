@@ -1,0 +1,81 @@
+@charset "utf 8";
+@import './reset.css';
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #eef2f7;
+}
+
+.main-page{
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.main-page h1{
+    text-align: center;
+    margin-bottom: 25px;
+    color: #3b2f2f;
+}
+
+.write-area form{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.write-area input[type="text"]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.write-area input[type="submit"]{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+.task-shelf{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.note-card{
+    background-color: white;
+    padding: 18px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.done-card{
+    background-color: #d1fae5;
+    border-left: 6px solid #10b981;
+}
+
+.note-card h2{
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.note-card p{
+    color: #555;
+    font-size: 14px;
+}
+
+.task-icons{
+    display: flex;
+    gap: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
